@@ -4,8 +4,8 @@
   "description": "package_analyse",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "tsc": "tsc src/index.ts",
+    "dev": "nodemon bin/index.ts",
+    "tsc": "tsc bin/index.ts",
     "commit": "cz"
   },
   "author": "CodeRun Team",
