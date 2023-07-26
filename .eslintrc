@@ -10,5 +10,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "plugins": ["prettier", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "0"
+  }
 }
