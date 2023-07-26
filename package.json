@@ -17,6 +17,7 @@
     "@types/eslint-config-prettier": "^6.11.0",
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/lint-staged": "^13.2.0",
+    "@types/node": "20.4.5",
     "@types/prettier": "^2.7.3",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
@@ -29,7 +30,9 @@
     "lint-staged": "^13.2.3",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0",
-    "typescript": "^5.1.6"
+    "ts-node": "10.9.1",
+    "tslib": "2.6.1",
+    "typescript": "5.1.6"
   },
   "husky": {
     "hooks": {
@@ -53,5 +56,6 @@
     "*.{css,less,scss,md,json}": [
       "prettier --write"
     ]
-  }
+  },
+  "ts-node": "ts-node"
 }
