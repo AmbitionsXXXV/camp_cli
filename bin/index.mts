@@ -4,7 +4,7 @@ import fs from "fs"
 import ora from "ora"
 import chalk from "chalk"
 import { program } from "commander"
-import { exec } from "child_process"
+// import { exec } from "child_process"
 import { dependencyGraph, traverseDependencies } from "../lib/index.mjs"
 
 program
