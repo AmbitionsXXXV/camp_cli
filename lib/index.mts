@@ -1,9 +1,11 @@
 import fs from "fs"
 import path from "path"
 
+// save dependencies that have been analyzed
 const analyzed = new Set<string>()
-export const dependencyGraph: { [key: string]: any } = {}
+
 // This object will hold the dependency graph
+export const dependencyGraph: { [key: string]: any } = {}
 
 export function getPackageJsonContent(filePath: string) {
   const content = fs.readFileSync(filePath, "utf-8")
