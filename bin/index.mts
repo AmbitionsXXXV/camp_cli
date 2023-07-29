@@ -13,6 +13,10 @@ program
   .option("--depth <n>", "The maximum depth of analysis", "Infinity")
   .option("--json <file-path>", "Output to a JSON file")
   .action((options: { depth?: string | number; json: string }) => {
+    // when depth is not provided, default to Infinity
+    if (!options.depth) {
+      console.log(chalk.yellow("warning: No depth parameter passed, defaulting to 'Infinity'."));
+    }
     options.depth =
       options.depth === "Infinity" ? Infinity : parseInt(options.depth as string)
     
@@ -52,3 +56,4 @@ program
   })
 
 program.parse(process.argv)
+
