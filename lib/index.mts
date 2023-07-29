@@ -6,7 +6,10 @@ export const analyzed = new Set<string>()
 
 // This object will hold the dependency graph
 // add circularDependencies property to hold circular dependencies
-export const dependencyGraph: { [key: string]: any, circularDependencies: { [key: string]: string } } = { circularDependencies: {} }
+export const dependencyGraph: {
+  [key: string]: any
+  circularDependencies: { [key: string]: string }
+} = { circularDependencies: {} }
 
 export function getPackageJsonContent(filePath: string) {
   const content = fs.readFileSync(filePath, "utf-8")
@@ -31,7 +34,7 @@ export function traverseDependencies(
   const packageName = packageJsonContent.name
   if (analyzed.has(packageName)) {
     if (!dependencyGraph.circularDependencies.hasOwnProperty(packageName)) {
-      dependencyGraph.circularDependencies[packageName] = packageJsonContent.version;
+      dependencyGraph.circularDependencies[packageName] = packageJsonContent.version
     }
     return
   }
